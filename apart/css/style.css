@@ -1,0 +1,94 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+html{font-family: 'Noto Sans KR', sans-serif;}
+* {margin:0; padding:0; outline:none !important; box-sizing: border-box;}
+ol, ul, li { list-style: none; }
+a { color:#000; text-decoration:none; transition:all .3s; }
+button{background:transparent;border:0;cursor: pointer;}
+input::-webkit-input-placeholder {
+  color: #c2c1c1;
+  font-weight:500;
+  font-size:3.27vw;
+}
+input:-ms-input-placeholder {
+  color: #c2c1c1;
+  font-weight:500;
+  font-size:3.27vw;
+}
+
+.bg-section{font-size: 0;position:relative}
+.img-box{position:relative;z-index:0}
+.img-box img{display:block;width:100%;}
+
+/* 영역1 */
+.bg-section.first .video-wrap{position:absolute;top:111vw;left:4.17vw;right:4.17vw;height:51vw}
+.bg-section.first .video-wrap iframe{width:100%;height:100%}
+.bg-section.first .event-input{position:absolute;top:240vw;left:9.96vw;right:9.96vw;box-shadow: 10px 8px 24px 0px rgba(35,35,35,0.31);}
+.bg-section.first .event-input .inp-wrap{position:absolute;top:15vw;left:6.79vw;right:7.5vw}
+.bg-section.first .event-input .inp-wrap input{padding:1.7vw;width:100%;height:10.27vw;background: transparent;border:0;font-size:4.27vw;}
+.bg-section.first .btn-area{position:absolute;top:38.26vw;left:8.62vw;right:8.62vw}
+.bg-section.first .btn-area button{display:block;width: 100%;}
+.bg-section.first .btn-area button img{width:100%}
+.bg-section.first .event-share{position:absolute;bottom:9.39vw;left:23.9vw;right:8.68vw}
+.bg-section.first .event-share .kko-copy-wrap{display: flex;justify-content: center;gap:2.13vw;margin-bottom:13.38vw}
+.bg-section.first .event-share .kko-copy-wrap > *{width:18.78vw;height:18.78vw;}
+.bg-section.first .event-share .kko-copy-wrap > * span{display:block;margin:2vw auto 0;width:11.38vw}
+.bg-section.first .event-share .kko-copy-wrap > * span img{width: 100%;}
+.bg-section.first .event-share .kko-copy-wrap .img-box{border-radius:2.84vw;overflow: hidden;box-shadow:5px 6px 7px 0px rgba(164, 136, 55, 0.35);}
+.bg-section.first .event-share .btn-area{position:static}
+.bg-section.third .btn-area{position:absolute;left:3.56vw;right:3.56vw;bottom:100vw;}
+.bg-section.third .btn-area a{display: block;}
+.bg-section.third .btn-area img{width:100%}
+
+/* 팝업 */
+.pop{display:none;}
+.pop.active{display:flex;justify-content:center;align-items:center;position:fixed;top:0;right:0;bottom:0;left:0;z-index:1;}
+.pop.active::before{content:"";position:fixed;top:0;right:0;bottom:0;left:0;background:rgba(0,0,0,0.5);z-index:0}
+.pop .pop-inner{position:relative;z-index:1;border-radius:4.55vw;}
+.pop .btn-wrap{display:flex;justify-content:center;gap:1.42vw;font-size:0}
+.pop .btn-wrap button{font-size:0}
+.pop .btn-wrap img{width:100%;font-size:10px}
+
+.pop.agree .pop-inner{padding:8.53vw 5.69vw;background: rgba(0,0,0,0.9);}
+.pop.agree .btn-wrap{padding-top:8.53vw;}
+
+.pop .pop-inner{width:97.3vw;padding:7.11vw 5.69vw;background: rgb(28,68,154); background: linear-gradient(-33deg, rgba(28,68,154,1) 35%, rgba(62,102,176,1) 100%);}
+.pop .pop-inner .pop-txt strong{display:block;font-size:7.83vw;line-height:1.21;color:#fff;font-weight:bold;letter-spacing:-0.03em;text-align: center;}
+.pop .pop-inner .pop-txt + .btn-wrap{padding-top:3.41vw;}
+.pop .btn-wrap button{width:57.33vw}
+.pop .btn-wrap.two button{width:43.1vw}
+.pop .btn-wrap + p{text-align:center;font-size:2.28vw;line-height:1.56;color:#fff;padding-top:1.71vw;}
+
+.pop .pop-inner .pop-txt.ico strong{position:relative;font-size:5.41vw;line-height: 1.32;padding-top:9.39vw;}
+.pop .pop-inner .pop-txt.ico strong::before{content:"";position:absolute;top:0;left:50%;right:0;margin-left:-3.42vw;width:6.82vw;height:6.82vw;background:url(../image/ico_info.png) no-repeat center center / contain ;}
+
+.pop.enter-info .pop-inner .pop-txt strong{font-size: 5.69vw;line-height:1.38}
+.pop.enter-info .pop-inner .inp-wrap,
+.pop.enter-info.share .pop-inner .attach.img{margin-top:3.84vw}
+.pop.enter-info .pop-inner .inp-wrap .frm-inp{display:flex;align-items: center;}
+.pop.enter-info .pop-inner .inp-wrap .frm-inp + .frm-inp{padding-top: 1.56vw;}
+.pop.enter-info .pop-inner .inp-wrap label{font-size: 4.27vw;font-weight: 500;color:#fff;min-width: 13.5vw;}
+.pop.enter-info .pop-inner .inp-wrap input{height:12.1vw;width:calc(100% - 13.5vw);padding:1.42vw}
+.pop.enter-info .btn-wrap{margin-top:7.4vw;}
+.pop.enter-info .btn-wrap button{width:34.6vw}
+.pop.enter-info .btn-wrap button.flex-1{width:63.64vw}
+
+.pop.enter-info.share .inp-wrap + .pop-txt{margin-top:7.82vw;}
+.pop.enter-info.share .pop-inner{max-height:80vh;overflow-y: auto;}
+.pop.enter-info.share .pop-inner .inp-wrap.url,
+.pop.enter-info.share .pop-inner .attach.img{position: relative}
+.pop.enter-info.share .pop-inner .inp-wrap.url input{width:calc(100% - 23.46vw)}
+.pop.enter-info.share .pop-inner .inp-wrap.url .add-input-url,
+.pop.enter-info.share .pop-inner .attach.img .add-input-img,
+.pop.enter-info.share .pop-inner .attach.img .attachFile{position:absolute;bottom:3.13vw;right:0;width:5.69vw;height:5.69vw;background:url(../image/button/add-btn.png) no-repeat center center / contain;}
+.pop.enter-info.share .pop-inner .attach.img .add-input-img,
+.pop.enter-info.share .pop-inner .attach.img .attachFile{bottom:9.67vw}
+.pop.enter-info.share .pop-inner .attach.img ul{white-space: nowrap;overflow-x: auto;font-size:0;max-width: 75.25vw;}
+.pop.enter-info.share .pop-inner .attach.img ul li{position:relative;display:inline-flex;justify-content:center;align-items:center;vertical-align:top;width:24.61vw;height:24.61vw;background:#fff;}
+.pop.enter-info.share .pop-inner .attach.img ul li + li{margin-left:0.71vw;}
+.pop.enter-info.share .pop-inner .attach.img ul li span{text-align: center;font-size:3.27vw;line-height:1.3;color:#c2c1c1;font-weight: 500;pointer-events: none;}
+.pop.enter-info.share .pop-inner .attach.img ul li img{width:100%;height:100%}
+.pop.enter-info.share .pop-inner .attach.img ul li label{position:absolute;top:0;right:0;left:0;bottom:0}
+.pop.enter-info.share .pop-inner .attach.img ul li input{display:none;}
+.pop.enter-info.share .pop-inner .attach.img ul li button.del-img{position:absolute;top:1.42vw;right:1.42vw;width:5.69vw;height:5.69vw;background: url(../image/button/del-btn.png) no-repeat center center / contain;}
